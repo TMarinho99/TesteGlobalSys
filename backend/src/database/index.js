@@ -1,10 +1,10 @@
 import Sequelize from 'sequelize';
 
-import Cep from '../app/models/Cep';
+import ZipCode from '../app/models/ZipCode';
 
 import databaseConfig from '../config/database';
 
-const models = [Cep];
+const models = [ZipCode];
 
 class Database {
   constructor() {

@@ -1,22 +1,22 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('ceps', {
+    await queryInterface.createTable('zip_codes', {
       id: {
         type: Sequelize.INTEGER,
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
       },
-      codigo_loja: {
+      store_code: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      faixa_inicio: {
-        type: Sequelize.INTEGER,
+      start_track: {
+        type: Sequelize.STRING,
         allowNull: false,
       },
-      faixa_fim: {
-        type: Sequelize.INTEGER,
+      end_track: {
+        type: Sequelize.STRING,
         allowNull: false,
       },
       created_at: {
@@ -31,6 +31,6 @@ module.exports = {
   },
 
   down: async (queryInterface) => {
-    await queryInterface.dropTable('ceps');
+    await queryInterface.dropTable('zip_codes');
   },
 };

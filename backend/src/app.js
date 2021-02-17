@@ -1,6 +1,6 @@
 import express from 'express';
 
-import CepRoutes from './routes/CepRoutes.routes';
+import ZipCodeRoutes from './routes/ZipCodeRoutes.routes';
 import './database';
 
 class App {
@@ -16,7 +16,7 @@ class App {
   }
 
   routes() {
-    this.server.use(CepRoutes);
+    this.server.use(ZipCodeRoutes);
   }
 }
 
